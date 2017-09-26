@@ -6,13 +6,16 @@ const TrancheAge = require('./trancheAge');
 const Categorie = require('./categorie');
 
 //données
-let tranche02 = new TrancheAge("tranche02",0,2);
-let tranche25 = new TrancheAge("tranche25",2,5);
-let tranche48 = new TrancheAge("tranche48",4,8);
 
-let categorie1 = new Categorie("Plain Air");
-let categorie2 = new Categorie("Jeux d'imagination");
-let categorie3 = new Categorie("Jeux d'eveil");
+    let tranche02 = new TrancheAge(1, "tranche02", 0, 2);
+    let tranche25 = new TrancheAge(2,"tranche25",2,5);
+    let tranche48 = new TrancheAge(3,"tranche48",4,8);
+
+
+
+let categorie1 = new Categorie(1,"Plain Air");
+let categorie2 = new Categorie(2,"Jeux d'imagination");
+let categorie3 = new Categorie(3,"Jeux d'eveil");
 
 let lesJouets = [];
 let unJouet1 = new Jouet(1,"Draisienne junior bleue",tranche25,categorie1);
@@ -85,5 +88,5 @@ try{
     });
 
 }catch (err){
-    console.error('Erreur de démarrage du serveur !',err)
+    console.error('Erreur de démarrage du serveur !',err);
 }
