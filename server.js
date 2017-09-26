@@ -6,6 +6,9 @@ const TrancheAge = require('./trancheAge');
 const Categorie = require('./categorie');
 const app = express();
 
+app.set('views','./views');
+app.set('view engine','pug');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -43,7 +46,7 @@ lesJouets.push(unJouet3);
 //Routes
 app.get('/', function(req,res){
     let responseText = 'Bienvenue dans le catalogue de jouet';
-    res.send(responseText);
+    res.render('index',{message: responseText });
 });
 
 //Affiche tous les jouets
