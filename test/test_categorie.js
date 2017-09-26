@@ -13,7 +13,7 @@ describe("Categorie",() =>{
         before(function(){
             categorie1 = new Categorie("Plein Air");
             tranche25 = new TrancheAge("tranche",2,5);
-            unJouet = new Jouet("Draisienne junior bleue", tranche25, categorie1);
+            unJouet = new Jouet(1,"Draisienne junior bleue", tranche25, categorie1);
         });
         it("Ajout d'un jouet",()=>{
             assert.equal(categorie1.get_nb_jouets(),1,'Ajout non réalisé');
